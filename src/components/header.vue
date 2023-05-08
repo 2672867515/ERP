@@ -14,36 +14,16 @@
     <div class="operation">
       <el-tooltip class="item" effect="dark" placement="bottom">
         <div slot="content">
-          <span style=" cursor: pointer" @click="dialogFormVisible = true">个人信息</span> <br><br>
           <span style=" cursor: pointer" @click="doExit">退出</span>
         </div>
         <i class="el-icon-s-operation" />
       </el-tooltip>
     </div>
-    <el-dialog title="个人信息" :visible.sync="dialogFormVisible">
-      <el-form :model="form">
-        <el-form-item label="账号" :label-width="formLabelWidth">
-          <el-input v-model="form.userName" autocomplete="off" />
-        </el-form-item>
-        <el-form-item label="姓名" :label-width="formLabelWidth">
-          <el-input v-model="form.name" autocomplete="off" />
-        </el-form-item>
-        <el-form-item label="电话" :label-width="formLabelWidth">
-          <el-input v-model="form.phone" autocomplete="off" />
-        </el-form-item>
-        <el-form-item label="邮箱" :label-width="formLabelWidth">
-          <el-input v-model="form.email" autocomplete="off" />
-        </el-form-item>
-      </el-form>
-      <div slot="footer" class="dialog-footer">
-        <el-button @click="dialogFormVisible = false">取 消</el-button>
-        <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
-      </div>
-    </el-dialog>
   </div>
 </template>
 
 <script>
+import { removeToken } from '../utils/cookie'
 export default {
   name: 'Header',
   data() {
@@ -66,6 +46,7 @@ export default {
   methods: {
     // 退出
     doExit() {
+      removeToken('token')
       this.$router.push('/login')
     },
     // 获取信息
