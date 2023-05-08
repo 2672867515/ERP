@@ -1,7 +1,6 @@
 <template>
   <div>
     home
-    <div class="a" @click="aa">aaa</div>
   </div>
 </template>
 
@@ -14,9 +13,7 @@ export default {
     }
   },
   methods: {
-    aa() {
-      this.$router.push({ path: '/layout/department' })
-    }
+
   }
 }
 </script>
