@@ -63,23 +63,6 @@
         </el-menu>
       </el-col>
     </el-row>
-    <el-dialog title="添加门店" :visible.sync="adddialog">
-      <el-form ref="ruleForm" :model="form" :rules="rules" label-width="90px">
-        <el-form-item label="门店名称:" prop="name">
-          <el-input v-model="form.name" autocomplete="off" />
-        </el-form-item>
-        <el-form-item label="门店面积:" prop="area">
-          <el-input v-model="form.area" placeholder="单位：平方米" autocomplete="off" />
-        </el-form-item>
-        <el-form-item label="门店地址:" prop="address">
-          <el-input v-model="form.address" autocomplete="off" />
-        </el-form-item>
-      </el-form>
-      <div slot="footer" class="dialog-footer">
-        <el-button size="mini" @click="adddialog = false">取 消</el-button>
-        <el-button size="mini" type="primary" @click="confirm">确 定</el-button>
-      </div>
-    </el-dialog>
   </div>
 </template>
 
