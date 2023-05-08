@@ -3,7 +3,7 @@
     <!-- 头像 -->
     <div class="user">
       <div id="lottie_box" class="animation" />
-      <div class="username">{{ usermes.name }}</div>
+      <div class="username">123</div>
     </div>
     <!-- 菜单 -->
     <el-row class="tac">
