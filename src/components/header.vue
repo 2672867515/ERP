@@ -47,7 +47,7 @@ export default {
     // 退出
     doExit() {
       removeToken('token')
-      this.$router.push('/login')
+      this.$router.push('/')
     },
     // 获取信息
     getname() {

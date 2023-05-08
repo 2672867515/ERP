@@ -76,7 +76,6 @@ export default {
 
   methods: {
     async   loginsus() {
-      // this.$router.push('/layout')
       await login(this.login).then(res => {
         console.log(res)
         if (res.data.code === 200) {
