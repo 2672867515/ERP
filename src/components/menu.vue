@@ -3,7 +3,7 @@
     <!-- 头像 -->
     <div class="user">
       <div id="lottie_box" class="animation" />
-      <div class="username">123</div>
+      <div class="username">辉柱大人</div>
     </div>
     <!-- 菜单 -->
     <el-row class="tac">
@@ -53,12 +53,10 @@ import { menu } from '../api/api'
 import lottie from 'lottie-web'
 export default {
   name: 'Menu',
-  comments: {
-    lottie
-  },
+
   data() {
     return {
-
+      // animation: {},
       usermes: {},
       addshow: false,
       adddialog: false,
@@ -75,14 +73,14 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      // this.$lottie.loadAnimation({
-      //   container: document.getElementById(`lottie_box`), // 包含动画的dom元素
-      //   renderer: 'svg', // 渲染出来的是什么格式
-      //   loop: true, // 循环播放
-      //   autoplay: true, // 自动播放
-      //   animationData: require('../static/lottie/management.json') // 动画json的本地路径
-      //   // path:''//网络json地址, 选择 animationData 后，则不用path了，
-      // })
+      lottie.loadAnimation({
+        container: document.getElementById(`lottie_box`), // 包含动画的dom元素
+        renderer: 'svg', // 渲染出来的是什么格式
+        loop: true, // 循环播放
+        autoplay: true, // 自动播放
+        animationData: require('../static/lottie/management.json') // 动画json的本地路径
+        // path:''//网络json地址, 选择 animationData 后，则不用path了，
+      })
     })
   },
   methods: {
